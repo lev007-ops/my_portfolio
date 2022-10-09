@@ -6,6 +6,7 @@ services:
     command: gunicorn personal_portfolio.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/home/app/web/staticfiles
+      - static_volume:/home/app/web/mediafiles
     expose:
       - 8000
     env_file:
@@ -29,6 +30,7 @@ services:
     build: ./nginx
     volumes:
       - static_volume:/home/app/web/staticfiles
+      - static_volume:/home/app/web/mediafiles
     ports:
       - ${WEB_SITE_PORT}:80
     depends_on:
