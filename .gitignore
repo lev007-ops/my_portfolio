@@ -12,6 +12,8 @@ Icon
 data/
 app/
 static/
+statifiles/
+media/
 
 # Thumbnails
 ._*
@@ -52,6 +54,8 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+.vscode/
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
