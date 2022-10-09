@@ -24,7 +24,7 @@ services:
     env_file:
       - ./.env
     ports:
-      - ${DB_ONLINE_PORT}:5432
+      - 0.0.0.0:${DB_ONLINE_PORT}:5432
   nginx:
     build: ./nginx
     volumes:
