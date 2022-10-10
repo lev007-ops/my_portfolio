@@ -4,10 +4,15 @@ from django.db import models
 
 
 class Project(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    technology = models.CharField(max_length=50)
-    image = models.ImageField(upload_to='projects/%Y-%m-%d/')
+    title = models.CharField(max_length=100, verbose_name='Название')
+    description = models.TextField(verbose_name='Описание')
+    technology = models.CharField(max_length=50, verbose_name='Технология')
+    image = models.ImageField(upload_to='projects/%Y-%m-%d/',
+                              verbose_name='Фото')
 
     def __str__(self) -> str:
         return self.title
+
+    class Meta:
+        db_table = 'projects'
+        verbose_name = 'Проект'
