@@ -191,6 +191,7 @@ cython_debug/
 # Django stuff:
 
 # Flask stuff:
+.DS_store
 
 # Scrapy stuff:
 

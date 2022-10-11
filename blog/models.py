@@ -10,6 +10,7 @@ class Category(models.Model):
     class Meta:
         db_table = 'categories'
         verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
 
 
 class Post(models.Model):
@@ -28,6 +29,7 @@ class Post(models.Model):
     class Meta:
         db_table = 'posts'
         verbose_name = 'Пост'
+        verbose_name_plural = 'Посты'
 
 
 class Comment(models.Model):
@@ -35,11 +37,13 @@ class Comment(models.Model):
     body = models.TextField(verbose_name='Текст комментария')
     created_on = models.DateTimeField(auto_now_add=True,
                                       verbose_name='Создано в')
-    post = models.ForeignKey('Post', on_delete=models.CASCADE, verbose_name='Пост')
+    post = models.ForeignKey('Post', on_delete=models.CASCADE,
+                             verbose_name='Пост')
 
     def __str__(self) -> str:
         return self.body
 
     class Meta:
         db_table = 'comments'
-        verbose_name = 'комментарий'
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'
