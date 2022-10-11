@@ -280,4 +280,6 @@ media/
 # Ignore code-workspaces
 *.code-workspace
 
+is-a.dev_domains
+
 # End of https://www.toptal.com/developers/gitignore/api/python,django,visualstudiocode
