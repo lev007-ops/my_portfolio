@@ -30,7 +30,6 @@ services:
     build:
       context: ./nginx
       dockerfile: Dockerfile.prod
-    dockerfile: 
     volumes:
       - static_volume:/home/app/web/staticfiles
       - static_volume:/home/app/web/mediafiles
