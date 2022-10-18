@@ -193,6 +193,9 @@ cython_debug/
 # Flask stuff:
 .DS_store
 
+*.crt
+*.key
+
 # Scrapy stuff:
 
 # Sphinx documentation
