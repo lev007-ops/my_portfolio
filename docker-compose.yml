@@ -31,7 +31,9 @@ services:
     volumes:
       - static_volume:/home/app/web/staticfiles
       - static_volume:/home/app/web/mediafiles
-      - ./ssl_sertificates/:/etc/nginx/certs/
+      - ./ssl/:/etc/nginx/ssl/
+    environment:
+      - USE_SSL=${USE_SSL}
     ports:
       - ${WEB_SITE_PORT}:80
       - 443:443
