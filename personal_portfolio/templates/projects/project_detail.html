@@ -15,6 +15,10 @@
         <br>
         <h5>Использованные технологии</h5>
         <p>{{ project.technology }}</p>
+        {% if project.github_link %}
+        <h5>GitHub проекта</h5>
+        <p><a href="{{ project.github_link }}">{{ project.github_link }}</a></p>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
