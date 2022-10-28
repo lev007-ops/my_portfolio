@@ -9,8 +9,10 @@ class Project(models.Model):
     technology = models.CharField(max_length=50, verbose_name='Технология')
     image = models.ImageField(upload_to='projects/%Y-%m-%d/',
                               verbose_name='Фото')
-    github_link = models.URLField(verbose_name='Ссылка на GitHub', null=True)
-    link = models.URLField(verbose_name='Ссылка на проект', null=True)
+    github_link = models.URLField(verbose_name='Ссылка на GitHub', null=True,
+                                  blank=True)
+    link = models.URLField(verbose_name='Ссылка на проект', null=True,
+                           blank=True)
 
     def __str__(self) -> str:
         return self.title
