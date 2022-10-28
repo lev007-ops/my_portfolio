@@ -10,6 +10,7 @@ class Project(models.Model):
     image = models.ImageField(upload_to='projects/%Y-%m-%d/',
                               verbose_name='Фото')
     github_link = models.URLField(verbose_name='Ссылка на GitHub', null=True)
+    link = models.URLField(verbose_name='Ссылка на проект', null=True)
 
     def __str__(self) -> str:
         return self.title

@@ -196,7 +196,7 @@ cython_debug/
 *.crt
 *.key
 
-mediafiles
+mediafiles/
 
 # Scrapy stuff:
 

@@ -19,6 +19,10 @@
         <h5>GitHub проекта</h5>
         <p><a href="{{ project.github_link }}">{{ project.github_link }}</a></p>
         {% endif %}
+        {% if project.link %}
+        <h5>Ссылка на проект</h5>
+        <p><a href="{{ project.link }}">{{ project.link }}</a></p>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
