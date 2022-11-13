@@ -271,6 +271,7 @@ media/
 
 # Local History for Visual Studio Code
 .history/
+pg_dumps/*
 
 # Built Visual Studio Code Extensions
 *.vsix
