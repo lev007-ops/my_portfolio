@@ -35,8 +35,8 @@ services:
       - static_volume:/home/app/web/mediafiles
       - ./ssl/:/etc/nginx/ssl/
     ports:
-      - ${WEB_SITE_PORT}:80
-      - 443:443
+      - 1337:80
+      - 1337:443
     depends_on:
       - web
     env_file:
